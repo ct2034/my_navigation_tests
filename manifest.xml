@@ -1,0 +1,17 @@
+<package>
+  <description brief="my_navigation_test">
+
+     my_navigation_test
+
+  </description>
+  <author>Christian Henkel</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/my_navigation_test</url>
+  <depend package="navigation_test_skeleton"/>
+  <depend package="cob_bringup_sim"/>
+  <depend package="cob_navigation_global"/>
+
+</package>
+
+
