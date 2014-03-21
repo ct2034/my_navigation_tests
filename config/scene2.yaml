@@ -1,0 +1,8 @@
+timeoutInS:        500
+repository:        git@github.com:ipa320/cob_navigation_tests_results
+collisionsTopic:   collisions
+cameraTopics:      [ /topCamera/image_raw ]
+
+route:
+    - [ 2.53,  -3.0,    0 ]
+    - [ 1.80,   0.0, -1.56]
