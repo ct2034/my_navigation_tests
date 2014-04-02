@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <launch>
 	<arg name="config_pkg"       value="$(find my_navigation_test)"/>
-	<arg name="sim"              value="true" />
+	<arg name="sim"              value="true"/>
 
-	<arg name="navigation"       default="2dnav_ros_tr"/>
+	<arg name="navigation_pkg"   default="$(find ipa_navigation_bringup)"/>
+	<arg name="navigation_arg"   default="2dnav_ipa_eband"/>
 
-	<arg name="robot"            default="cob3-6"/>
+	<arg name="robot"            default="cob3-3"/>
 	<arg name="moveBaseAction"   default="/move_base"/>
 	<arg name="bumperTopics"     default="[/base_bumper/state]" />
 
-	<arg name="robot_env"        default="ipa-apartment"/>
+	<arg name="robot_env"        default="ipa-kitchen"/>
 	<arg name="map"              default="$(find cob_default_env_config)/$(arg robot_env)/map.yaml"/>
 
 	<arg name="scenarioName"     default="scene2"/>
@@ -19,7 +20,7 @@
 	<!-- ###################### -->
 	<!-- start robot simulation -->
 	<!-- ###################### -->
-	<include file="$( find cob_bringup_sim )/launch/robot.launch">
+	<include file="$(find cob_bringup_sim )/launch/robot.launch">
 		<arg name="robot"     value="$( arg robot )" />
 		<arg name="robot_env" value="$( arg robot_env )" />
 	</include>
@@ -28,7 +29,7 @@
 	<!-- ################ -->
 	<!-- start navigation -->
 	<!-- ################ -->
-	<include file="$(find cob_navigation_global)/launch/$(arg navigation).launch">
+	<include file="$(arg navigation_pkg)/launch/$(arg navigation_arg).launch">
 		<arg name="robot"     value="$( arg robot )" />
 		<arg name="robot_env" value="$( arg robot_env )" />
 		<arg name="map"       value="$( arg map )" />
@@ -52,7 +53,7 @@
 			<arg name="sim"               value="$( arg sim )" />
 			<arg name="scenarioName"      value="$( arg scenarioName )" />
 			<arg name="robot"             value="$( arg robot )" />
-			<arg name="navigation"        value="$( arg navigation )" />
+			<arg name="navigation"        value="$( arg navigation_arg )" />
 		</include>
 	</group>
 
