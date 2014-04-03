@@ -9,7 +9,7 @@
 	<arg name="moveBaseAction"   default="/move_base"/>
 	<arg name="bumperTopics"     default="[/base_bumper/state]" />
 
-	<arg name="robot_env"        default="ipa-apartment"/>
+	<arg name="robot_env"        default="ipa-kitchen"/>
 	<arg name="map"              default="$(find cob_default_env_config)/$(arg robot_env)/map.yaml"/>
 
 	<arg name="scenarioName"     default="scene2"/>
@@ -47,6 +47,8 @@
 		<include file="$( find navigation_test_collision_detection )/launch/collision_detection.launch">
 			<arg name="bumperTopics"      value="$(arg bumperTopics)" />
 		</include>
+        <!-- gazebo ground-truth tf publisher -->
+        <include file="$( find gazebo_gt_tf_publisher )/launch/publisher.launch"/>
 		<!-- start test skeleton -->
 		<include file="$( find navigation_test_skeleton )/launch/navigation.test">
 			<arg name="sim"               value="$( arg sim )" />

@@ -4,6 +4,13 @@ collisionsTopic:   collisions
 cameraTopics:      [ /topCamera/image_raw ]
 
 route:
-    - [ 0,    0,    0 ]
-    - [ 0.1,  0.1, -1.56]
-    - [ 0,    0,    0 ]
+    - [ 0,    0,    0     ]
+    - [ .5,  0.5,  3.14  ]
+    - [ -1,   -1,   0     ]
+    - [ 0,    0,    -3.14 ]
+
+#setupRobotService: /setup_robot
+#robotConfig:
+#  arm: folded
+#  tray: down
+

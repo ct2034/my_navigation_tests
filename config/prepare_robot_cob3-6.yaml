@@ -1,5 +1,5 @@
 setupRobotService: /setup_robot
 robotConfig:
   arm: folded
-  tray: down
+  tray: storetray
 
