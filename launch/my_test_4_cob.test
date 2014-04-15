@@ -6,7 +6,7 @@
 	<arg name="navigation_pkg"   default="$(find cob_navigation_global)"/>
 	<arg name="navigation_arg"   default="2dnav_ros_tr"/>
 
-	<arg name="robot"            default="cob3-3"/>
+	<arg name="robot"            default="cob3-6"/>
 	<arg name="moveBaseAction"   default="/move_base"/>
 	<arg name="bumperTopics"     default="[/base_bumper/state]" />
 

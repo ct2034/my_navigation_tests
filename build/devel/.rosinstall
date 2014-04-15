@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/aub-ch/ros/my_navigation_test/build/devel/setup.sh
