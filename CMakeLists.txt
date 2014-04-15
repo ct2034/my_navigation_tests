@@ -31,9 +31,16 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 rosbuild_check_for_display(disp)
 if(disp)
+<<<<<<< HEAD
 #  rosbuild_add_rostest(launch/my_test.test)
 #  rosbuild_add_rostest(launch/my_test_2.test)
   rosbuild_add_rostest(launch/my_test_3.test)
+=======
+  #rosbuild_add_rostest(launch/my_test.test)
+  #rosbuild_add_rostest(launch/my_test_2.test)
+  #rosbuild_add_rostest(launch/my_test_3.test)
+  rosbuild_add_rostest(my_test_5_ipa.test)
+>>>>>>> e26317b93c3972e92fd2615fc5ef0d114e148280
 else(disp)
   rosbuild_add_roslaunch_check(launch robot:=cob3-3)
 endif(disp)
